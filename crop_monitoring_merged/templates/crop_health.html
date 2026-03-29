@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>🌱 Crop Health Monitoring</h2>
+
+<div class="cards">
+  <div class="card">
+    <h3>NDVI Index (Demo)</h3>
+    <canvas id="ndviChart"></canvas>
+  </div>
+  <div class="card">
+    <h3>Health Status</h3>
+    <p>AI Model Detects: <b>Healthy</b></p>
+  </div>
+</div>
+
+<form method="POST" action="#" class="form-box">
+  <h3>Quick Add Sensor (Demo)</h3>
+  <input type="number" step="0.1" id="temp_input" placeholder="Temperature">
+  <input type="number" step="0.1" id="moisture_input" placeholder="Soil Moisture">
+  <input type="number" step="0.1" id="pest_input" placeholder="Pest Level">
+  <button type="button" class="btn" onclick="submitSensor()">Submit</button>
+</form>
+{% endblock %}

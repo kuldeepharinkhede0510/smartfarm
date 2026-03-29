@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Upload Crop Image</h2>
+<form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data" class="form-box">
+  <label>Select image (jpg, png):</label>
+  <input type="file" name="crop_image" accept="image/*" required>
+  <button type="submit" class="btn">Analyze Image</button>
+</form>
+{% endblock %}

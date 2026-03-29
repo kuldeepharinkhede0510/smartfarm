@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SmartFarm - Prototype</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>🌾 SmartFarm</h2>
+    <nav>
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('upload') }}">Upload Image</a>
+      <a href="{{ url_for('dashboard') }}">Dashboard</a>
+      <a href="{{ url_for('crop_health') }}">Crop Health</a>
+      <a href="{{ url_for('soil_condition') }}">Soil Condition</a>
+      <a href="{{ url_for('pest_risks') }}">Pest Risks</a>
+      <a href="{{ url_for('reports') }}">Reports</a>
+    </nav>
+  </div>
+
+  <div class="main">
+    <header>
+      <div class="header-left"><h1>SmartFarm</h1></div>
+      <div class="header-right">Prototype</div>
+    </header>
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+
+  <footer>
+    <p>© 2025 AI Crop Monitoring System | Developed by Agrivision</p>
+</footer>
+  <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

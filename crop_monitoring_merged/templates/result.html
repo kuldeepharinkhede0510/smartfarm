@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Analysis Result</h2>
+<div class="result-card">
+  <div class="img-col">
+    <img src="{{ url_for('uploaded_file', filename=data.filename) }}" alt="uploaded" />
+  </div>
+  <div class="info-col">
+    <p><strong>Crop:</strong> {{ data.crop }}</p>
+    <p><strong>Disease:</strong> {{ data.disease }}</p>
+    <p><strong>Fertilizer Suggestion:</strong> {{ data.fertilizer }}</p>
+    <p><strong>Pesticide Suggestion:</strong> {{ data.pesticide }}</p>
+    <p><strong>Advice:</strong> {{ data.advice }}</p>
+    <p><strong>Time:</strong> {{ data.timestamp }}</p>
+    <a class="btn" href="{{ url_for('download_report', id=data.id) }}">Download Report (PDF)</a>
+    <a class="btn" href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+  </div>
+</div>
+{% endblock %}
